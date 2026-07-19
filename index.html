@@ -9,9 +9,9 @@
             --bg: #0f172a;    /* Deep slate/navy background */
             --text: #ffffff;  /* White text */
             --muted: #94a3b8; /* Soft gray for smaller text */
-            --accent: #38bdf8; /* Bright sky blue for links/accents to pop on dark */
+            --accent: #00d2ff; /* High-contrast bright cyan for links and key metrics */
             --card-bg: #1e293b; /* Slightly lighter slate for the cards */
-            --bar-fill: #38bdf8;
+            --bar-fill: #00d2ff;
             --border: #334155; /* Darker border line to separate elements cleanly */
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,10 +20,10 @@
             background: var(--bg); 
             color: var(--text); 
             line-height: 1.6; 
-            padding: 3rem 1.5rem; 
+            padding: 4rem 2rem; 
         }
         
-        .container { max-width: 850px; margin: 0 auto; }
+        .container { max-width: 1040px; margin: 0 auto; }
         
         header { 
             margin-bottom: 5rem; 
@@ -38,8 +38,8 @@
             letter-spacing: -0.02em;
         }
 
-        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
-        p.subtitle { font-size: 1.3rem; color: var(--muted); margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+        h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
+        p.subtitle { font-size: 1.4rem; color: var(--muted); margin-bottom: 2rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.5; }
         
         /* Circular Headshot Styling with subtle professional drop shadow */
         .headshot {
@@ -54,81 +54,91 @@
         }
 
         /* Navigation Links */
-        .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; }
+        .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; }
         .links a { 
             color: var(--text); 
             text-decoration: none; 
             font-weight: 600; 
-            font-size: 0.95rem;
+            font-size: 1rem;
             padding-bottom: 2px;
             border-bottom: 2px solid transparent; 
             transition: all 0.2s ease; 
         }
         .links a:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
 
-        section { margin-bottom: 5rem; }
-        h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.75rem; border-bottom: 2px solid var(--text); padding-bottom: 0.5rem; }
+        section { margin-bottom: 6rem; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; border-bottom: 2px solid var(--text); padding-bottom: 0.5rem; }
 
         /* Biography Section Styling */
         .bio-section {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text);
-            line-height: 1.75;
-            margin-bottom: 5rem;
+            line-height: 1.8;
+            margin-bottom: 6rem;
             padding-top: 1.5rem;
         }
-        .bio-section p { max-width: 780px; }
+        .bio-section p { max-width: 900px; }
 
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; margin-bottom: 2rem; }
-        @media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+        @media(min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
 
         /* Experience & Highlight Cards */
         .card { 
             background: var(--card-bg); 
-            padding: 2rem; 
+            padding: 2.5rem; 
             border-radius: 12px; 
             border: 1px solid var(--border);
             transition: all 0.25s ease-in-out; 
         }
         .card:hover { 
             transform: translateY(-4px); 
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15); 
+            box-shadow: 0 12px 30px rgba(0, 210, 255, 0.15); 
         }
-        .card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text); font-weight: 700; }
-        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6; }
-        .card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
-        .card a:hover { color: var(--text); }
+        .card h3 { font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text); font-weight: 700; }
+        .card p { color: var(--muted); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6; }
+        .card a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        .card a:hover { color: var(--accent); }
 
         /* Video Showcase Styling */
-        .video-card { background: var(--card-bg); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); }
+        .video-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .video-card h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem 0; line-height: 1.4; color: var(--text); font-weight: 700; }
-        .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+        .video-card h3 { font-size: 1.3rem; margin: 1.25rem 0 0.5rem 0; line-height: 1.4; color: var(--text); font-weight: 700; }
+        .video-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
 
         /* Data Dashboard Styling */
-        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 1.75rem; }
-        @media(min-width: 600px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        @media(min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
         .stat-box { 
             background: var(--card-bg); 
-            padding: 1.5rem 1rem; 
+            padding: 1.75rem 1.25rem; 
             border-radius: 12px; 
             text-align: center; 
             border: 1px solid var(--border);
-            border-top: 4px solid var(--accent); /* Elegant top border accent instead of heavy left block */
+            border-top: 4px solid var(--accent); 
         }
-        .stat-number { font-size: 2rem; font-weight: 700; color: var(--text); line-height: 1.2; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
-        .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .stat-growth { font-size: 0.85rem; color: #16a34a; font-weight: 700; margin-top: 0.25rem; }
+        .stat-number { font-size: 2.25rem; font-weight: 700; color: var(--text); line-height: 1.2; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        .stat-label { font-size: 0.85rem; color: var(--muted); font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-growth { font-size: 0.9rem; color: #10b981; font-weight: 700; margin-top: 0.25rem; }
         
-        .chart-card { background: var(--card-bg); padding: 1.75rem; border-radius: 12px; border: 1px solid var(--border); }
-        .chart-row { margin-bottom: 1.25rem; }
+        .chart-card { background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border); }
+        .chart-row { margin-bottom: 1.5rem; }
         .chart-row:last-child { margin-bottom: 0; }
-        .chart-label { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; justify-content: space-between; color: var(--text); }
-        .chart-bar-bg { background: var(--border); height: 10px; border-radius: 5px; overflow: hidden; }
-        .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 5px; }
+        .chart-label { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; justify-content: space-between; color: var(--text); }
+        .chart-bar-bg { background: var(--border); height: 12px; border-radius: 6px; overflow: hidden; }
+        .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 6px; }
 
-        footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 6rem; text-align: center; font-weight: 500; }
+        .video-grid-highlights a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+        .video-grid-highlights a:hover {
+            color: var(--accent);
+        }
+
+        footer { font-size: 0.95rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 6rem; text-align: center; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -228,7 +238,7 @@
         <section id="videos">
             <h2>Video Showcase</h2>
             
-            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem; color: var(--text); font-weight: 700;">Digital Marketing &amp; Brand Strategy</h3>
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--text); font-weight: 700;">Digital Marketing &amp; Brand Strategy</h3>
             <div class="grid">
                 <div class="video-card">
                     <div class="video-container">
@@ -238,7 +248,7 @@
                     <p>Brand expansion and community integration content showcasing regional footprint growth, corporate storytelling, and multi-location asset deployment.</p>
                 </div>
 
-                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
+                <div class="card video-grid-highlights" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
                     <h3>Viral Campaign Highlights</h3>
                     <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--muted);">Direct case study examples of platform-optimized content scaling across social networks:</p>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
@@ -249,7 +259,7 @@
                 </div>
             </div>
 
-            <h3 style="font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 1.25rem; color: var(--text); font-weight: 700;">Broadcast Journalism &amp; Healthcare</h3>
+            <h3 style="font-size: 1.4rem; margin-top: 3rem; margin-bottom: 1.5rem; color: var(--text); font-weight: 700;">Broadcast Journalism &amp; Healthcare</h3>
             <div class="grid">
                 <div class="video-card">
                     <div class="video-container">
@@ -275,7 +285,7 @@
                     <p>Corporate healthcare multimedia highlighting patient experience, community connection, and brand humanization.</p>
                 </div>
 
-                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
+                <div class="card video-grid-highlights" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
                     <h3>Additional Storytelling Reels</h3>
                     <div style="display: flex; flex-direction: column; gap: 0.6rem;">
                         <a href="https://www.youtube.com/watch?v=jCBDk9kAvIY" target="_blank" style="font-weight: 600;">• Murrow Feature Writing Compilation →</a>
