@@ -36,6 +36,14 @@
             color: #444;
             margin-bottom: 40px;
         }
+        section {
+            margin-top: 50px;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -63,13 +71,31 @@
             font-weight: 600;
             font-size: 0.9rem;
         }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Scott Fleishman</h1>
-        <!-- Your blue-shirt headshot -->
+        <!-- Double-check your GitHub file extension (.jpg vs .png) so this renders perfectly -->
         <img src="headshot.jpg" alt="Scott Fleishman" class="headshot">
     </header>
 
@@ -81,45 +107,50 @@
             </p>
         </section>
 
-        <!-- Data Highlights Section -->
-        <section style="margin-top: 50px;">
-            <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px; font-size: 1.5rem;">Digital Growth &amp; Engagement</h2>
+        <!-- Sprout Social Data Highlights Section -->
+        <section>
+            <h2>Digital Growth &amp; Engagement</h2>
             <p style="color: #666; font-style: italic; margin-bottom: 25px;">Data verified via Sprout Social, tracking multi-platform brand scaling for Nucar Family of Dealerships.</p>
             
             <div class="metrics-grid">
-                
-                <!-- Facebook Video Views -->
                 <div class="metric-card" style="border-left: 4px solid #1877F2;">
                     <div class="metric-title">Facebook Video Views</div>
                     <div class="metric-value">8.7M+</div>
                     <div class="metric-growth">↑ 336% YTD Organic Growth</div>
                 </div>
-
-                <!-- TikTok Traction -->
                 <div class="metric-card" style="border-left: 4px solid #000000;">
                     <div class="metric-title">TikTok (@nucargarage)</div>
                     <div class="metric-value">2.3M+</div>
                     <div class="metric-growth">↑ 236.3% Video Views</div>
                 </div>
-
-                <!-- YouTube Expansion -->
                 <div class="metric-card" style="border-left: 4px solid #FF0000;">
                     <div class="metric-title">YouTube Shorts</div>
                     <div class="metric-value">1.44M+</div>
                     <div class="metric-growth">↑ 2,432% Video Views YoY</div>
                 </div>
-
-                <!-- General Engagement -->
                 <div class="metric-card" style="border-left: 4px solid #4A5568;">
                     <div class="metric-title">Facebook Interactions</div>
                     <div class="metric-value">441K+</div>
                     <div class="metric-growth">↑ 121.2% Organic Reactions</div>
                 </div>
+            </div>
+        </section>
 
+        <!-- Restored Video Portfolio Section -->
+        <section>
+            <h2>Featured Work &amp; Broadcast Reels</h2>
+            
+            <h3>Broadcast Journalism Reel</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+
+            <h3>Digital Marketing &amp; Viral Campaigns</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
             </div>
         </section>
     </main>
 
 </body>
 </html>
-
