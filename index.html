@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Fleishman | Multimedia Portfolio</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666666;
+            --accent: #0066cc;
+            --card-bg: #f8f9fa;
+            --bar-fill: #0066cc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+        
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        header { margin-bottom: 4rem; }
+        h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 0.5rem; }
+        p.subtitle { font-size: 1.25rem; color: var(--muted); margin-bottom: 1.5rem; max-width: 600px; }
+        
+        .links a { color: var(--text); text-decoration: none; margin-right: 1.5rem; font-weight: 500; border-bottom: 2px solid transparent; transition: border 0.2s; }
+        .links a:hover { border-bottom: 2px solid var(--accent); }
+
+        section { margin-bottom: 4rem; }
+        h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; letter-spacing: -0.03em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        @media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+        .card a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+
+        /* Video Showcase Styling */
+        .video-card { background: var(--card-bg); padding: 1rem; border-radius: 8px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; background: #000; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-card h3 { font-size: 1.1rem; margin: 0.75rem 0 0.25rem 0; line-height: 1.4; }
+        .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+
+        /* Data Dashboard Styling */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+        @media(min-width: 600px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+        .stat-box { background: var(--card-bg); padding: 1.25rem; border-radius: 8px; text-align: center; border-left: 4px solid var(--accent); }
+        .stat-number { font-size: 1.75rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+        .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 500; margin-top: 0.25rem; }
+        
+        .chart-card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; }
+        .chart-row { margin-bottom: 1rem; }
+        .chart-row:last-child { margin-bottom: 0; }
+        .chart-label { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.25rem; display: flex; justify-content: space-between; }
+        .chart-bar-bg { background: #e9ecef; height: 12px; border-radius: 6px; overflow: hidden; }
+        .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 6px; }
+
+        footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid #eee; padding-top: 2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Scott Fleishman</h1>
+            <p class="subtitle">Emmy Award-winning storyteller, Director of Social Media, and broadcast media professional with two decades of experience.</p>
+            <div class="links">
+                <a href="#work">Experience</a>
+                <a href="#dashboard">Growth Metrics</a>
+                <a href="#videos">Video Showcase</a>
+                <a href="mailto:scottfleishmantv@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">LinkedIn</a>
+                <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">YouTube</a>
+            </div>
+        </header>
+
+        <!-- DATA & GROWTH DASHBOARD -->
+        <section id="dashboard">
+            <h2>Social Media Growth & Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">1.2M+</div>
+                    <div class="stat-label">Viral Video Views</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Dealership Brands</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2,600+</div>
+                    <div class="stat-label">Videos Produced</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">75K+</div>
+                    <div class="stat-label">TikTok Likes</div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-row">
+                    <div class="chart-label"><span>Organic Reach & Brand Scaling</span> <span>100% Growth</span></div>
+                    <div class="chart-bar-bg"><div class="chart-bar-fill" style="width: 100%;"></div></div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label"><span>Audience Engagement Rate</span> <span>High Impact</span></div>
+                    <div class="chart-bar-bg"><div class="chart-bar-fill" style="width: 85%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Featured Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Digital Marketing & Brand Growth</h3>
+                    <p>Built the Nucar Family social brand from scratch across TikTok, YouTube, and Instagram for 25+ Northeast dealerships, scaling organic reach and generating viral content views.</p>
+                    <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">Connect on LinkedIn →</a>
+                </div>
+                <div class="card">
+                    <h3>Broadcast Journalism & Sports</h3>
+                    <p>Two decades of experience shooting, writing, editing, and anchoring daily news and sports segments for WCAX-TV and KMTR NewsSource 16 under tight deadlines.</p>
+                    <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">View Channel Hub →</a>
+                </div>
+                <div class="card">
+                    <h3>Healthcare Communications</h3>
+                    <p>Led strategic external messaging, high-impact video production highlighting patient/provider journeys, and launched corporate multimedia storytelling assets.</p>
+                    <a href="mailto:scottfleishmantv@gmail.com">Inquire for Case Studies →</a>
+                </div>
+                <div class="card">
+                    <h3>Awards & Recognition</h3>
+                    <p>Recipient of a New England Emmy Award, 5 Edward R. Murrow Awards for writing and storytelling, and named NSMA Vermont Sportscaster of the Year.</p>
+                    <a href="mailto:scottfleishmantv@gmail.com">Contact Scott →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SHOWCASE SECTION -->
+        <section id="videos">
+            <h2>Video Showcase</h2>
+            
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--muted);">Digital Marketing & Brand Strategy</h3>
+            <div class="grid">
+                <!-- Video: Building Nucar -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Eo-46-zrDkg" allowfullscreen></iframe>
+                    </div>
+                    <h3>Welcoming Nucar Nissan of Keene</h3>
+                    <p>Brand expansion and community integration content showcasing regional footprint growth, corporate storytelling, and multi-location asset deployment.</p>
+                </div>
+
+                <!-- Viral Campaigns List Card -->
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: #fff; border: 1px solid #eee;">
+                    <h3>Viral Campaign Highlights</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--muted);">Direct case study examples of platform-optimized content scaling across social networks:</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="https://www.instagram.com/reel/DYfOIdXDVuV/?hl=en" target="_blank" style="font-weight: 600; color: var(--accent);">• View Instagram Viral Reel (1.2M+ Views) →</a>
+                        <a href="https://www.tiktok.com/@nucargarage/video/7626143293935521037?lang=en" target="_blank" style="font-weight: 600; color: var(--accent);">• View TikTok Viral Campaign (1.2M+ Views) →</a>
+                        <a href="https://www.youtube.com/playlist?list=PLF7_X6Wg2J9eAglVwnR85wlrObvSz37Xn" target="_blank" style="font-weight: 600; color: var(--accent);">• Full Nucar Brand Content Playlist →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--muted);">Broadcast Journalism & Healthcare</h3>
+            <div class="grid">
+                <!-- Video 1: Emmy Winner -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/3J7qLld2m4I" allowfullscreen></iframe>
+                    </div>
+                    <h3>"A Special UPS Delivery"</h3>
+                    <p><strong>New England Emmy Award Winner.</strong> A human-interest feature highlighting community kindness and human connection.</p>
+                </div>
+
+                <!-- Video 2: Murrow Winner -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/YJGZ7ovNlQU" allowfullscreen></iframe>
+                    </div>
+                    <h3>"From One Role Model to Another"</h3>
+                    <p><strong>Edward R. Murrow Award Winner.</strong> High-impact sports storytelling documenting mutual inspiration across thousands of miles.</p>
+                </div>
+
+                <!-- Video 3: Gifford Health Care -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/B0n1g8PFuVE" allowfullscreen></iframe>
+                    </div>
+                    <h3>Sam Dorrance’s Journey | Gifford Health Care</h3>
+                    <p>Corporate healthcare multimedia highlighting patient experience, community connection, and brand humanization.</p>
+                </div>
+
+                <!-- Additional Reels Card -->
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: #fff; border: 1px solid #eee;">
+                    <h3>Additional Storytelling Reels</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="https://www.youtube.com/watch?v=jCBDk9kAvIY" target="_blank" style="font-weight: 600;">• Murrow Feature Writing Compilation →</a>
+                        <a href="https://www.youtube.com/watch?v=7bK6FAnXABQ" target="_blank" style="font-weight: 600;">• "The Underdog Aikens" Story (Murrow Winner) →</a>
+                        <a href="https://www.youtube.com/watch?v=8tE2YEh7Cqg" target="_blank" style="font-weight: 600;">• "Running with Obstacles" Feature (Murrow Winner) →</a>
+                        <a href="https://www.youtube.com/watch?v=YJCcp0UE3yE" target="_blank" style="font-weight: 600;">• Governor Scott 100th Presser (Writing Winner) →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Scott Fleishman. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
