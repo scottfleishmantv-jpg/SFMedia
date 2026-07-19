@@ -7,247 +7,285 @@
     <style>
         :root {
             --bg: #ffffff;
-            --text: #1a1a1a;
-            --muted: #666666;
-            --accent: #0066cc;
-            --card-bg: #f8f9fa;
-            --bar-fill: #0066cc;
+            --text: #0f172a; /* Deep elegant slate/navy */
+            --muted: #475569; /* Polished dark gray */
+            --accent: #2563eb; /* Sharp, modern professional blue */
+            --card-bg: #f8fafc; /* Crisp, clean off-white card background */
+            --bar-fill: #2563eb;
+            --border: #e2e8f0;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6; 
+            padding: 3rem 1.5rem; 
+        }
         
-        .container { max-width: 800px; margin: 0 auto; }
+        .container { max-width: 850px; margin: 0 auto; }
         
-        header { margin-bottom: 4rem; text-align: center; } /* Centered header for layout balance */
-        h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 0.5rem; }
-        p.subtitle { font-size: 1.25rem; color: var(--muted); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        header { 
+            margin-bottom: 5rem; 
+            text-align: center; 
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
         
-        /* Circular Headshot Styling */
+        /* Premium editorial serif font for primary headings */
+        h1, h2, h3 { 
+            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
+        p.subtitle { font-size: 1.3rem; color: var(--muted); margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+        
+        /* Circular Headshot Styling with subtle professional drop shadow */
         .headshot {
             border-radius: 50%;
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             object-fit: cover;
             display: block;
-            margin: 0 auto 1.5rem auto;
-            border: 3px solid #eee;
+            margin: 0 auto 1.75rem auto;
+            border: 4px solid var(--bg);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
         }
+
+        /* Navigation Links */
+        .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; }
+        .links a { 
+            color: var(--text); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.95rem;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent; 
+            transition: all 0.2s ease; 
+        }
+        .links a:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+        section { margin-bottom: 5rem; }
+        h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.75rem; border-bottom: 2px solid var(--text); padding-bottom: 0.5rem; }
 
         /* Biography Section Styling */
         .bio-section {
-            font-size: 1.1rem;
-            color: #333;
-            line-height: 1.7;
-            margin-bottom: 4rem;
-            text-align: left;
+            font-size: 1.15rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-bottom: 5rem;
         }
-        
-        .links a { color: var(--text); text-decoration: none; margin: 0 0.75rem; font-weight: 500; border-bottom: 2px solid transparent; transition: border 0.2s; display: inline-block; }
-        .links a:hover { border-bottom: 2px solid var(--accent); }
+        .bio-section p { max-width: 780px; }
 
-        section { margin-bottom: 4rem; }
-        h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; letter-spacing: -0.03em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
-
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; margin-bottom: 2rem; }
         @media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
 
-        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-2px); }
-        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-        .card a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        /* Experience & Highlight Cards */
+        .card { 
+            background: var(--card-bg); 
+            padding: 2rem; 
+            border-radius: 12px; 
+            border: 1px solid var(--border);
+            transition: all 0.25s ease-in-out; 
+        }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04); border-color: #cbd5e1; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text); font-weight: 700; }
+        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6; }
+        .card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .card a:hover { color: var(--text); }
 
         /* Video Showcase Styling */
-        .video-card { background: var(--card-bg); padding: 1rem; border-radius: 8px; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; background: #000; }
+        .video-card { background: var(--card-bg); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .video-card h3 { font-size: 1.1rem; margin: 0.75rem 0 0.25rem 0; line-height: 1.4; }
-        .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+        .video-card h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem 0; line-height: 1.4; color: var(--text); font-weight: 700; }
+        .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
 
         /* Data Dashboard Styling */
-        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 1.75rem; }
         @media(min-width: 600px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-        .stat-box { background: var(--card-bg); padding: 1.25rem; border-radius: 8px; text-align: center; border-left: 4px solid var(--accent); }
-        .stat-number { font-size: 1.75rem; font-weight: 700; color: var(--text); line-height: 1.2; }
-        .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 500; margin-top: 0.25rem; }
-        .stat-growth { font-size: 0.75rem; color: #25a75b; font-weight: 600; margin-top: 0.25rem; }
+        .stat-box { 
+            background: var(--card-bg); 
+            padding: 1.5rem 1rem; 
+            border-radius: 12px; 
+            text-align: center; 
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--accent); /* Elegant top border accent instead of heavy left block */
+        }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--text); line-height: 1.2; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-growth { font-size: 0.85rem; color: #16a34a; font-weight: 700; margin-top: 0.25rem; }
         
-        .chart-card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; }
-        .chart-row { margin-bottom: 1rem; }
+        .chart-card { background: var(--card-bg); padding: 1.75rem; border-radius: 12px; border: 1px solid var(--border); }
+        .chart-row { margin-bottom: 1.25rem; }
         .chart-row:last-child { margin-bottom: 0; }
-        .chart-label { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.25rem; display: flex; justify-content: space-between; }
-        .chart-bar-bg { background: #e9ecef; height: 12px; border-radius: 6px; overflow: hidden; }
-        .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 6px; }
+        .chart-label { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; justify-content: space-between; color: var(--text); }
+        .chart-bar-bg { background: #e2e8f0; height: 10px; border-radius: 5px; overflow: hidden; }
+        .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 5px; }
 
-        footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid #eee; padding-top: 2rem; }
+        footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 6rem; text-align: center; font-weight: 500; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <!-- Headshot image addition -->
             <img src="headshot.jpg" alt="Scott Fleishman" class="headshot">
-            
             <h1>Scott Fleishman</h1>
-            <p class="subtitle">Emmy Award-winning storyteller, Director of Social Media, and broadcast media professional with two decades of experience.</p>
+            <p class="subtitle">Emmy Award-winning storyteller, Director of Social Media, and broadcast media professional with two decades of experience.[cite: 1]</p>
             <div class="links">
                 <a href="#bio">Biography</a>
                 <a href="#dashboard">Growth Metrics</a>
                 <a href="#work">Experience</a>
                 <a href="#videos">Video Showcase</a>
-                <a href="mailto:scottfleishmantv@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">LinkedIn</a>
-                <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">YouTube</a>
+                <a href="mailto:scottfleishmantv@gmail.com">Email[cite: 1]</a>
+                <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">LinkedIn[cite: 1]</a>
+                <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">YouTube[cite: 1]</a>
             </div>
         </header>
 
-        <!-- NEW BIOGRAPHY SECTION -->
+        <!-- BIOGRAPHY SECTION -->
         <section id="bio" class="bio-section">
             <h2>About Me</h2>
             <p>
-                I am an Emmy and five-time Edward R. Murrow Award-winning storyteller with a 20-year career spanning major-market broadcast journalism and executive digital marketing leadership. As a former television anchor and reporter, I mastered the art of high-impact narrative and audience connection. Today, I translate those enterprise-level communication skills into driving digital strategy, building high-performing cross-platform campaigns, and generating millions of organic views that scale brand growth and deliver proven ROI.
+                I am an Emmy and five-time Edward R. Murrow Award-winning storyteller with a 20-year career spanning major-market broadcast journalism and executive digital marketing leadership. As a former television anchor and reporter, I mastered the art of high-impact narrative and audience connection. Today, I translate those enterprise-level communication skills into driving digital strategy, building high-performing cross-platform campaigns, and generating millions of organic views that scale brand growth and deliver proven ROI.[cite: 1]
             </p>
         </section>
 
-        <!-- UPDATED DATA & GROWTH DASHBOARD -->
+        <!-- DATA & GROWTH DASHBOARD -->
         <section id="dashboard">
-            <h2>Social Media Growth &amp; Impact</h2>
-            <p style="color: var(--muted); font-style: italic; margin-bottom: 1.5rem; font-size: 0.9rem;">Data verified via Sprout Social, tracking multi-platform brand scaling for Nucar Family of Dealerships.</p>
+            <h2>Social Media Growth &amp; Impact[cite: 1]</h2>
+            <p style="color: var(--muted); font-style: italic; margin-bottom: 1.75rem; font-size: 0.95rem;">Data verified via Sprout Social, tracking multi-platform brand scaling for Nucar Family of Dealerships.[cite: 1]</p>
             
             <div class="stats-grid">
-                <div class="stat-box" style="border-left-color: #1877F2;">
+                <div class="stat-box" style="border-top-color: #1877F2;">
                     <div class="stat-number">8.7M+</div>
-                    <div class="stat-label">Facebook Views</div>
-                    <div class="stat-growth">↑ 336% YTD</div>
+                    <div class="stat-label">Facebook Views[cite: 1]</div>
+                    <div class="stat-growth">↑ 336% YTD[cite: 1]</div>
                 </div>
-                <div class="stat-box" style="border-left-color: #000000;">
+                <div class="stat-box" style="border-top-color: #000000;">
                     <div class="stat-number">2.3M+</div>
-                    <div class="stat-label">TikTok Views</div>
-                    <div class="stat-growth">↑ 236.3%</div>
+                    <div class="stat-label">TikTok Views[cite: 1]</div>
+                    <div class="stat-growth">↑ 236.3%[cite: 1]</div>
                 </div>
-                <div class="stat-box" style="border-left-color: #FF0000;">
+                <div class="stat-box" style="border-top-color: #FF0000;">
                     <div class="stat-number">1.44M+</div>
-                    <div class="stat-label">YouTube Shorts</div>
-                    <div class="stat-growth">↑ 2,432% YoY</div>
+                    <div class="stat-label">YouTube Shorts[cite: 1]</div>
+                    <div class="stat-growth">↑ 2,432% YoY[cite: 1]</div>
                 </div>
-                <div class="stat-box" style="border-left-color: #4A5568;">
+                <div class="stat-box" style="border-top-color: #4A5568;">
                     <div class="stat-number">441K+</div>
-                    <div class="stat-label">FB Interactions</div>
-                    <div class="stat-growth">↑ 121.2%</div>
+                    <div class="stat-label">FB Interactions[cite: 1]</div>
+                    <div class="stat-growth">↑ 121.2%[cite: 1]</div>
                 </div>
             </div>
 
             <div class="chart-card">
                 <div class="chart-row">
-                    <div class="chart-label"><span>Organic Reach &amp; Brand Scaling</span> <span>100% Growth</span></div>
+                    <div class="chart-label"><span>Organic Reach &amp; Brand Scaling[cite: 1]</span> <span>100% Growth[cite: 1]</span></div>
                     <div class="chart-bar-bg"><div class="chart-bar-fill" style="width: 100%;"></div></div>
                 </div>
                 <div class="chart-row">
-                    <div class="chart-label"><span>Audience Engagement Rate</span> <span>High Impact</span></div>
+                    <div class="chart-label"><span>Audience Engagement Rate[cite: 1]</span> <span>High Impact[cite: 1]</span></div>
                     <div class="chart-bar-bg"><div class="chart-bar-fill" style="width: 85%;"></div></div>
                 </div>
             </div>
         </section>
 
+        <!-- EXPERIENCE SECTION -->
         <section id="work">
-            <h2>Featured Experience</h2>
+            <h2>Featured Experience[cite: 1]</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Digital Marketing &amp; Brand Growth</h3>
-                    <p>Built the Nucar Family social brand from scratch across TikTok, YouTube, and Instagram for 25+ Northeast dealerships, scaling organic reach and generating viral content views.</p>
-                    <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">Connect on LinkedIn →</a>
+                    <h3>Digital Marketing &amp; Brand Growth[cite: 1]</h3>
+                    <p>Built the Nucar Family social brand from scratch across TikTok, YouTube, and Instagram for 25+ Northeast dealerships, scaling organic reach and generating viral content views.[cite: 1]</p>
+                    <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">Connect on LinkedIn →[cite: 1]</a>
                 </div>
                 <div class="card">
-                    <h3>Broadcast Journalism &amp; Sports</h3>
-                    <p>Two decades of experience shooting, writing, editing, and anchoring daily news and sports segments for WCAX-TV and KMTR NewsSource 16 under tight deadlines.</p>
-                    <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">View Channel Hub →</a>
+                    <h3>Broadcast Journalism &amp; Sports[cite: 1]</h3>
+                    <p>Two decades of experience shooting, writing, editing, and anchoring daily news and sports segments for WCAX-TV and KMTR NewsSource 16 under tight deadlines.[cite: 1]</p>
+                    <a href="https://www.youtube.com/@ScottFleishmanmedia" target="_blank">View Channel Hub →[cite: 1]</a>
                 </div>
                 <div class="card">
-                    <h3>Healthcare Communications</h3>
-                    <p>Led strategic external messaging, high-impact video production highlighting patient/provider journeys, and launched corporate multimedia storytelling assets.</p>
-                    <a href="mailto:scottfleishmantv@gmail.com">Inquire for Case Studies →</a>
+                    <h3>Healthcare Communications[cite: 1]</h3>
+                    <p>Led strategic external messaging, high-impact video production highlighting patient/provider journeys, and launched corporate multimedia storytelling assets.[cite: 1]</p>
+                    <a href="mailto:scottfleishmantv@gmail.com">Inquire for Case Studies →[cite: 1]</a>
                 </div>
                 <div class="card">
-                    <h3>Awards &amp; Recognition</h3>
-                    <p>Recipient of a New England Emmy Award, 5 Edward R. Murrow Awards for writing and storytelling, and named NSMA Vermont Sportscaster of the Year.</p>
-                    <a href="mailto:scottfleishmantv@gmail.com">Contact Scott →</a>
+                    <h3>Awards &amp; Recognition[cite: 1]</h3>
+                    <p>Recipient of a New England Emmy Award, 5 Edward R. Murrow Awards for writing and storytelling, and named NSMA Vermont Sportscaster of the Year.[cite: 1]</p>
+                    <a href="mailto:scottfleishmantv@gmail.com">Contact Scott →[cite: 1]</a>
                 </div>
             </div>
         </section>
 
         <!-- VIDEO SHOWCASE SECTION -->
         <section id="videos">
-            <h2>Video Showcase</h2>
+            <h2>Video Showcase[cite: 1]</h2>
             
-            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--muted);">Digital Marketing &amp; Brand Strategy</h3>
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem; color: var(--text); font-weight: 700;">Digital Marketing &amp; Brand Strategy[cite: 1]</h3>
             <div class="grid">
-                <!-- Video: Building Nucar -->
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/Eo-46-zrDkg" allowfullscreen></iframe>
                     </div>
-                    <h3>Welcoming Nucar Nissan of Keene</h3>
-                    <p>Brand expansion and community integration content showcasing regional footprint growth, corporate storytelling, and multi-location asset deployment.</p>
+                    <h3>Welcoming Nucar Nissan of Keene[cite: 1]</h3>
+                    <p>Brand expansion and community integration content showcasing regional footprint growth, corporate storytelling, and multi-location asset deployment.[cite: 1]</p>
                 </div>
 
-                <!-- Viral Campaigns List Card -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: #fff; border: 1px solid #eee;">
-                    <h3>Viral Campaign Highlights</h3>
-                    <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--muted);">Direct case study examples of platform-optimized content scaling across social networks:</p>
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
+                    <h3>Viral Campaign Highlights[cite: 1]</h3>
+                    <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--muted);">Direct case study examples of platform-optimized content scaling across social networks:[cite: 1]</p>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                        <a href="https://www.instagram.com/reel/DYfOIdXDVuV/?hl=en" target="_blank" style="font-weight: 600; color: var(--accent);">• View Instagram Viral Reel (1.2M+ Views) →</a>
-                        <a href="https://www.tiktok.com/@nucargarage/video/7626143293935521037?lang=en" target="_blank" style="font-weight: 600; color: var(--accent);">• View TikTok Viral Campaign (1.2M+ Views) →</a>
-                        <a href="https://www.youtube.com/playlist?list=PLF7_X6Wg2J9eAglVwnR85wlrObvSz37Xn" target="_blank" style="font-weight: 600; color: var(--accent);">• Full Nucar Brand Content Playlist →</a>
+                        <a href="https://www.instagram.com/reel/DYfOIdXDVuV/?hl=en" target="_blank" style="font-weight: 600;">• View Instagram Viral Reel (1.2M+ Views) →[cite: 1]</a>
+                        <a href="https://www.tiktok.com/@nucargarage/video/7626143293935521037?lang=en" target="_blank" style="font-weight: 600;">• View TikTok Viral Campaign (1.2M+ Views) →[cite: 1]</a>
+                        <a href="https://www.youtube.com/playlist?list=PLF7_X6Wg2J9eAglVwnR85wlrObvSz37Xn" target="_blank" style="font-weight: 600;">• Full Nucar Brand Content Playlist →[cite: 1]</a>
                     </div>
                 </div>
             </div>
 
-            <h3 style="font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--muted);">Broadcast Journalism &amp; Healthcare</h3>
+            <h3 style="font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 1.25rem; color: var(--text); font-weight: 700;">Broadcast Journalism &amp; Healthcare[cite: 1]</h3>
             <div class="grid">
-                <!-- Video 1: Emmy Winner -->
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/3J7qLld2m4I" allowfullscreen></iframe>
                     </div>
-                    <h3>"A Special UPS Delivery"</h3>
-                    <p><strong>New England Emmy Award Winner.</strong> A human-interest feature highlighting community kindness and human connection.</p>
+                    <h3>"A Special UPS Delivery"[cite: 1]</h3>
+                    <p><strong>New England Emmy Award Winner.</strong> A human-interest feature highlighting community kindness and human connection.[cite: 1]</p>
                 </div>
 
-                <!-- Video 2: Murrow Winner -->
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/YJGZ7ovNlQU" allowfullscreen></iframe>
                     </div>
-                    <h3>"From One Role Model to Another"</h3>
-                    <p><strong>Edward R. Murrow Award Winner.</strong> High-impact sports storytelling documenting mutual inspiration across thousands of miles.</p>
+                    <h3>"From One Role Model to Another"[cite: 1]</h3>
+                    <p><strong>Edward R. Murrow Award Winner.</strong> High-impact sports storytelling documenting mutual inspiration across thousands of miles.[cite: 1]</p>
                 </div>
 
-                <!-- Video 3: Gifford Health Care -->
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/B0n1g8PFuVE" allowfullscreen></iframe>
                     </div>
-                    <h3>Sam Dorrance’s Journey | Gifford Health Care</h3>
-                    <p>Corporate healthcare multimedia highlighting patient experience, community connection, and brand humanization.</p>
+                    <h3>Sam Dorrance’s Journey | Gifford Health Care[cite: 1]</h3>
+                    <p>Corporate healthcare multimedia highlighting patient experience, community connection, and brand humanization.[cite: 1]</p>
                 </div>
 
-                <!-- Additional Reels Card -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: #fff; border: 1px solid #eee;">
-                    <h3>Additional Storytelling Reels</h3>
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="https://www.youtube.com/watch?v=jCBDk9kAvIY" target="_blank" style="font-weight: 600;">• Murrow Feature Writing Compilation →</a>
-                        <a href="https://www.youtube.com/watch?v=7bK6FAnXABQ" target="_blank" style="font-weight: 600;">• "The Underdog Aikens" Story (Murrow Winner) →</a>
-                        <a href="https://www.youtube.com/watch?v=8tE2YEh7Cqg" target="_blank" style="font-weight: 600;">• "Running with Obstacles" Feature (Murrow Winner) →</a>
-                        <a href="https://www.youtube.com/watch?v=YJCcp0UE3yE" target="_blank" style="font-weight: 600;">• Governor Scott 100th Presser (Writing Winner) →</a>
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
+                    <h3>Additional Storytelling Reels[cite: 1]</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                        <a href="https://www.youtube.com/watch?v=jCBDk9kAvIY" target="_blank" style="font-weight: 600;">• Murrow Feature Writing Compilation →[cite: 1]</a>
+                        <a href="https://www.youtube.com/watch?v=7bK6FAnXABQ" target="_blank" style="font-weight: 600;">• "The Underdog Aikens" Story (Murrow Winner) →[cite: 1]</a>
+                        <a href="https://www.youtube.com/watch?v=8tE2YEh7Cqg" target="_blank" style="font-weight: 600;">• "Running with Obstacles" Feature (Murrow Winner) →[cite: 1]</a>
+                        <a href="https://www.youtube.com/watch?v=YJCcp0UE3yE" target="_blank" style="font-weight: 600;">• Governor Scott 100th Presser (Writing Winner) →[cite: 1]</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>© 2026 Scott Fleishman. All Rights Reserved.</p>
+            <p>© 2026 Scott Fleishman. All Rights Reserved.[cite: 1]</p>
         </footer>
     </div>
 
