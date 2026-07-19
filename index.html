@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scott Fleishman | Multimedia Portfolio</title>
     <style>
-:root {
-    --bg: #0f172a;    /* Deep slate/navy background */
-    --text: #ffffff;  /* White text */
-    --muted: #94a3b8; /* Soft gray for smaller text */
-    --accent: #38bdf8; /* Bright sky blue for links/accents to pop on dark */
-    --card-bg: #1e293b; /* Slightly lighter slate for the cards */
-    --bar-fill: #38bdf8;
-    --border: #334155; /* Darker border line to separate elements cleanly */
-}
+        :root {
+            --bg: #0f172a;    /* Deep slate/navy background */
+            --text: #ffffff;  /* White text */
+            --muted: #94a3b8; /* Soft gray for smaller text */
+            --accent: #38bdf8; /* Bright sky blue for links/accents to pop on dark */
+            --card-bg: #1e293b; /* Slightly lighter slate for the cards */
+            --bar-fill: #38bdf8;
+            --border: #334155; /* Darker border line to separate elements cleanly */
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -49,8 +49,8 @@
             object-fit: cover;
             display: block;
             margin: 0 auto 1.75rem auto;
-            border: 4px solid var(--bg);
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            border: 4px solid var(--border);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
         }
 
         /* Navigation Links */
@@ -89,7 +89,7 @@
             border: 1px solid var(--border);
             transition: all 0.25s ease-in-out; 
         }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04); border-color: #cbd5e1; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2); border-color: var(--accent); }
         .card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--text); font-weight: 700; }
         .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6; }
         .card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
@@ -97,7 +97,7 @@
 
         /* Video Showcase Styling */
         .video-card { background: var(--card-bg); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .video-card h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem 0; line-height: 1.4; color: var(--text); font-weight: 700; }
         .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
@@ -121,7 +121,7 @@
         .chart-row { margin-bottom: 1.25rem; }
         .chart-row:last-child { margin-bottom: 0; }
         .chart-label { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; justify-content: space-between; color: var(--text); }
-        .chart-bar-bg { background: #e2e8f0; height: 10px; border-radius: 5px; overflow: hidden; }
+        .chart-bar-bg { background: var(--border); height: 10px; border-radius: 5px; overflow: hidden; }
         .chart-bar-fill { background: var(--bar-fill); height: 100%; border-radius: 5px; }
 
         footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 6rem; text-align: center; font-weight: 500; }
@@ -199,7 +199,7 @@
             <div class="grid">
                 <div class="card">
                     <h3>Digital Marketing &amp; Brand Growth</h3>
-                    <p>Built the Nucar Family social brand from scratch across TikTok, YouTube, and Instagram for 25+ Northeast dealerships, scaling organic reach and generating viral content views.</p>
+                    <p>Built the <strong>Nucar Family of Dealerships</strong> social brand from scratch across TikTok, YouTube, and Instagram for 25+ Northeast dealerships, scaling organic reach and generating viral content views.</p>
                     <a href="https://www.linkedin.com/in/scottbfleishman/" target="_blank">Connect on LinkedIn →</a>
                 </div>
                 <div class="card">
