@@ -105,10 +105,15 @@
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .video-card h3 { font-size: 1.3rem; margin: 1.25rem 0 0.5rem 0; line-height: 1.4; color: var(--text); font-weight: 700; }
         .video-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
-        .shorts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .shorts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 1.5rem; }
         .short-container { position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .short-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .view-stat { color: var(--accent); font-weight: 700; }
+        .thumb-wrap { position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: block; }
+        .thumb-wrap img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(0,0,0,0.55); }
+        .play-btn::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-38%, -50%); border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent #fff; }
+        .watch-tag { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.65); color: #fff; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
 
         /* Data Dashboard Styling */
         .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
@@ -289,7 +294,11 @@
                 </div>
 
                 <div class="video-card">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXKzJ_yAidZ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0 auto; max-width:540px; min-width:250px; padding:0; width:100%;"></blockquote>
+                    <a class="thumb-wrap" href="https://www.instagram.com/reel/DXKzJ_yAidZ/" target="_blank" aria-label="Watch on Instagram">
+                        <img src="https://www.instagram.com/reel/DXKzJ_yAidZ/media/?size=l" alt="What Modification Should No One Make?">
+                        <span class="play-btn"></span>
+                        <span class="watch-tag">Watch on Instagram</span>
+                    </a>
                     <h3>What Modification Should No One Make?</h3>
                     <p><span class="view-stat">1.8M views on Instagram</span><br>Thinking about lifting your truck? A Nucar tech explains why the shop says skip it.</p>
                 </div>
@@ -341,6 +350,5 @@
         </footer>
     </div>
 
-<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
