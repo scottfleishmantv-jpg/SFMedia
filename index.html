@@ -67,6 +67,7 @@
         .links a:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
 
         section { margin-bottom: 6rem; }
+        #videos { margin-bottom: 3rem; }
         h2 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; border-bottom: 2px solid var(--text); padding-bottom: 0.5rem; }
 
         /* Biography Section Styling */
@@ -91,7 +92,10 @@
             border-radius: 12px; 
             border: 1px solid var(--border);
             transition: all 0.25s ease-in-out; 
+            display: flex; 
+            flex-direction: column; 
         }
+        .card > a { margin-top: auto; padding-top: 1rem; }
         .card:hover { 
             transform: translateY(-4px); 
             box-shadow: 0 12px 30px rgba(0, 210, 255, 0.15); 
@@ -251,7 +255,7 @@
                     <p>Community storytelling in action: Nucar backs the young ninja athletes at Action Norwood, turning a brand sponsorship into a story about local kids chasing big goals.</p>
                 </div>
 
-                <div class="card video-grid-highlights" style="display: flex; flex-direction: column; justify-content: center; background: var(--card-bg);">
+                <div class="card video-grid-highlights" style="display: flex; flex-direction: column; justify-content: flex-start; background: var(--card-bg);">
                     <h3>Platform Profiles &amp; Channels</h3>
                     <p style="margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--muted);">Direct access to active corporate profiles and cross-platform campaign hubs:</p>
                     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
